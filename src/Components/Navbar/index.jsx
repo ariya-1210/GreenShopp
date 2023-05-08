@@ -10,8 +10,10 @@ export const Navbar = () => {
 
       <Description color=' #46A358' > <Icon.Logo/> Greenshop</Description>
       <UL>
-      <UL.LI>Home</UL.LI>
-      <UL.LI>Shop</UL.LI>
+      <UL.LI> <b>Home</b></UL.LI>
+      <UL.LI> <b>Shop</b></UL.LI>
+      <UL.LI> <b>Contacts</b></UL.LI>
+      <UL.LI> <b>Phone</b></UL.LI>
       </UL>
       <Button onClick={()=>dispatch({type:'korzinka'})}>korzinka</Button>
     </Container>
