@@ -14,4 +14,18 @@ font-size:{({fs})=>fs&&fs};
 font-weight:{({fw})=>fw&&fw};
 color:{({color})=>color&&color};
 `
-export {Container,Image,Description}
+const Button=styled.button`
+height:30px;
+width:50%;
+border:none;
+border-radius:10px;
+background-color:#7431F8;
+margin-top:10px;
+color:white;
+cursor:pointer;
+:active{
+    transform:scale(0.97);
+}
+`
+
+export {Container,Image,Description,Button}

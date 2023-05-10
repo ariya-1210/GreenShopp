@@ -9,13 +9,13 @@ import flower8 from '../assets/img/flower8.svg'
 import flower9 from '../assets/img/flower9.svg'
 export const Product=[
     {id:1, name:'Barberton Daisy', price:'199.19',image:flower1,quantity:false},
-    {id:2, name:'Barberton Daisy', price:'199.19',image:flower2,quantity:false},
-    {id:3, name:'Barberton Daisy', price:'199.19',image:flower3,quantity:false},
-    {id:4, name:'Barberton Daisy', price:'199.19',image:flower4,quantity:false},
-    {id:5, name:'Barberton Daisy', price:'199.19',image:flower5,quantity:false},
-    {id:6, name:'Barberton Daisy', price:'199.19',image:flower6,quantity:false},
-    {id:7, name:'Barberton Daisy', price:'199.19',image:flower7,quantity:false},
-    {id:8, name:'Barberton Daisy', price:'199.19',image:flower8,quantity:false},
-    {id:9, name:'Barberton Daisy', price:'199.19',image:flower9,quantity:false},
+    {id:2, name:'Naplikg greenty', price:'699.09',image:flower2,quantity:false},
+    {id:3, name:'Moolera nertipo', price:'189.99',image:flower3,quantity:false},
+    {id:4, name:'Plutred vtomkle', price:'460.11',image:flower4,quantity:false},
+    {id:5, name:'Freenti bloodre', price:'133.45',image:flower5,quantity:false},
+    {id:6, name:'Likater vitrina', price:'222.34',image:flower6,quantity:false},
+    {id:7, name:'Zionnyr kiopler', price:'660.98',image:flower7,quantity:false},
+    {id:8, name:'Queryjhg dionsa', price:'125.54',image:flower8,quantity:false},
+    {id:9, name:'Copallio nurrik', price:'711.13',image:flower9,quantity:false},
 ]
 export default Product
