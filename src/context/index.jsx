@@ -11,9 +11,15 @@ export const Context = ({children}) => {
     const [state,dispatch]=useReducer((state,action)=>{
 switch(action.type){
   case 'korzinka': return{...state,korzinka:!state.korzinka}
-  case 'buy': let newProduct=state.data.filter((value)=>value.id==action.payload.id)
-  
-  return {...state,newBasket:newProduct}
+
+  case 'buy': let newProduct=state.data.map((value)=>value.id==action.payload.id && {...value,quantity:true})
+  newProduct.filter((value)=>value.id && value.id)
+  console.log(newProduct[0]);
+  let add=state.newBasket.map((value)=>value.id=action.payload.id)
+
+
+
+  return {...state,newBasket:newProduct[0]}
 }
     },
     {

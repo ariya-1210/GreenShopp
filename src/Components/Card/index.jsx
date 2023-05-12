@@ -13,7 +13,13 @@ export const Card = () => {
               <Image src={value.image}/>
               <Description>{value.name}</Description>
               <Description><b>{value.price}</b></Description>
-              <Button onClick={()=>dispatch({type:'buy',payload:{id:value.id}})}>Buy</Button>
+              {
+                state.data.quantity ?
+                 ( <Button>Return</Button> )
+                 :               
+                 (<Button onClick={()=>dispatch({type:'buy',payload:{id:value.id}})}>Buy</Button>)
+              }
+
             </div>
           )
         })
