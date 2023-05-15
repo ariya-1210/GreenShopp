@@ -13,7 +13,7 @@ switch(action.type){
   case 'korzinka': return{...state,korzinka:!state.korzinka}
 
   case 'buy':
-  let newProduct=state.data.map((value)=> value.id===action.payload.id && 
+  let newProduct=state.data.map((value)=> value.id===action.payload.id &&
   {...value,addtoCard:true,quantity:value.quantity+1})
  
   newProduct=newProduct.filter((value)=>value && value)
@@ -23,8 +23,19 @@ switch(action.type){
   return {...state,data:newData,basket:add}
 
   case 'plus':
-    let plus=state.data.map((value)=> value.id===action.payload.id && {...value,quantity:value.quantity+1})
-  return {...state}
+    let plus=state.basket.map((value)=> value.id===action.payload.id &&
+     {...value,quantity:value.quantity+1})
+     plus=plus.filter((value)=>value && value)
+     let newPlus=state.basket.map((value)=> value.id ===action.payload.id ?{...plus[0]}:value)
+     return {...state, basket:newPlus}
+case 'delet':
+  let delet =state.basket.filter((value)=> value.id !==action.payload.id)
+  let deletProduct=state.data.map((value)=> value.id===action.payload.id &&
+  {...value,addtoCard:false})
+  deletProduct=deletProduct.filter((value)=>value && value)
+  console.log(deletProduct);
+  return{...state,basket:delet}
+
 }
     },
     {

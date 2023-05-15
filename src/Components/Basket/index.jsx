@@ -10,7 +10,8 @@ export const Basket = () => {
      state?.basket?.map((value)=>{
       return(
         <h1 key={value.id}>{value.name} {value.quantity}
-        <button onClick={()=>dispatch({type:'plus',payload:{id:value.id}})}></button>
+        <button onClick={()=>dispatch({type:'plus',payload:{id:value.id}})}>Plus</button>
+        <button onClick={()=>dispatch({type:'delet',payload:{id:value.id}})}>Delet</button>
         </h1>
       )
      })

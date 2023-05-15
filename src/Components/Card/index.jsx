@@ -15,9 +15,9 @@ export const Card = () => {
               <Description>{value.name}</Description>
               <Description><b>{value.price}</b></Description>
               {
-                value.addtoCard ? ( <Button>Cancel</Button> )
-                 :               
-                 (<Button onClick={()=>dispatch({type:'buy',payload:{id:value.id}})}>Buy</Button>)
+                value.addtoCard ? 
+                ( <Button onClick={()=>dispatch({type:'delet',payload:{id:value.id}})}>Cancel</Button> )
+                :(<Button onClick={()=>dispatch({type:'buy',payload:{id:value.id}})}>Buy</Button>)
               }
 
             </div>
