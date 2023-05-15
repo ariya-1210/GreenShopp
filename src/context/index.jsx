@@ -12,19 +12,24 @@ export const Context = ({children}) => {
 switch(action.type){
   case 'korzinka': return{...state,korzinka:!state.korzinka}
 
-  case 'buy': let newProduct=state.data.map((value)=>value.id==action.payload.id && {...value,quantity:true})
-  newProduct.filter((value)=>value.id && value.id)
-  console.log(newProduct[0]);
-  let add=state.newBasket.map((value)=>value.id=action.payload.id)
+  case 'buy':
+  let newProduct=state.data.map((value)=> value.id===action.payload.id && 
+  {...value,addtoCard:true,quantity:value.quantity+1})
+ 
+  newProduct=newProduct.filter((value)=>value && value)
+  let add=[...state.basket,...newProduct]
+  let newData=state.data.map((value)=> value.id===action.payload.id ? {...newProduct[0]}:value )
+   
+  return {...state,data:newData,basket:add}
 
-
-
-  return {...state,newBasket:newProduct[0]}
+  case 'plus':
+    let plus=state.data.map((value)=> value.id===action.payload.id && {...value,quantity:value.quantity+1})
+  return {...state}
 }
     },
     {
         data:Product,
-        newBasket:[],
+        basket:[],
         korzinka:false
     })
   return (

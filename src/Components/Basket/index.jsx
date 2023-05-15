@@ -7,9 +7,11 @@ export const Basket = () => {
   return (
     <Container>
     {
-     state?.newBasket?.map((value)=>{
+     state?.basket?.map((value)=>{
       return(
-        <h1 key={value.id}>{value.name}</h1>
+        <h1 key={value.id}>{value.name} {value.quantity}
+        <button onClick={()=>dispatch({type:'plus',payload:{id:value.id}})}></button>
+        </h1>
       )
      })
     }

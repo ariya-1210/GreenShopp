@@ -15,7 +15,9 @@ export const Navbar = () => {
       <UL.LI> <b>Contacts</b></UL.LI>
       <UL.LI> <b>Phone</b></UL.LI>
       </UL>
-      <Button onClick={()=>dispatch({type:'korzinka'})}>korzinka</Button>
+      <Button onClick={()=>dispatch({type:'korzinka'})}>
+        korzinka {state.basket.length}
+        </Button>
     </Container>
   )
 }

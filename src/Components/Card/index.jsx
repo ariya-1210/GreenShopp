@@ -4,6 +4,7 @@ import { productContext } from '../../context'
 
 export const Card = () => {
   const [state,dispatch]=useContext(productContext)
+  console.log(state.data);
   return (
     <Container>
       {
@@ -14,8 +15,7 @@ export const Card = () => {
               <Description>{value.name}</Description>
               <Description><b>{value.price}</b></Description>
               {
-                state.data.quantity ?
-                 ( <Button>Return</Button> )
+                value.addtoCard ? ( <Button>Cancel</Button> )
                  :               
                  (<Button onClick={()=>dispatch({type:'buy',payload:{id:value.id}})}>Buy</Button>)
               }
